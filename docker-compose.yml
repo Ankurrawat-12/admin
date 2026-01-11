@@ -35,6 +35,9 @@ services:
     build:
       context: ./apps/web
       dockerfile: Dockerfile
+      args:
+        # For local Docker development, frontend calls API on localhost:8000
+        VITE_API_URL: http://localhost:8000/api/v1
     container_name: admin_panel_web
     restart: unless-stopped
     ports:
