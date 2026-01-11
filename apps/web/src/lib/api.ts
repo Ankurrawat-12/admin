@@ -1,4 +1,5 @@
-const API_BASE = '/api/v1'
+// Use environment variable for API URL, fallback to relative path for local dev
+const API_BASE = import.meta.env.VITE_API_URL || '/api/v1'
 
 type QueryParams = Record<string, string | number | boolean | undefined | null>
 
