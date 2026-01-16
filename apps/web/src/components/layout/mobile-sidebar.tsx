@@ -45,14 +45,14 @@ export function MobileSidebar({ open, onClose }: MobileSidebarProps) {
       {/* Sidebar */}
       <div 
         className={cn(
-          "fixed inset-y-0 left-0 z-50 w-full max-w-xs lg:hidden transition-transform duration-300 ease-out",
-          open ? "translate-x-0" : "-translate-x-full"
+          "fixed inset-y-0 left-0 z-50 w-full max-w-xs lg:hidden transition-all duration-300 ease-out",
+          open ? "translate-x-0" : "-translate-x-full pointer-events-none"
         )}
       >
         {/* Close button */}
         <div className={cn(
           "absolute left-full top-0 flex w-16 justify-center pt-5 transition-opacity duration-300",
-          open ? "opacity-100" : "opacity-0"
+          open ? "opacity-100" : "opacity-0 pointer-events-none"
         )}>
           <Button
             variant="ghost"
